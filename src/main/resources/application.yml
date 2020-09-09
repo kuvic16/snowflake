@@ -1,0 +1,6 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://127.0.0.1:5432/snowflake
+    username: postgres
+    password: 1234
+    pool-size: 30
