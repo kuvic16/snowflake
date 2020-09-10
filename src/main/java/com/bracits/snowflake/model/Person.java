@@ -10,17 +10,17 @@ import java.util.UUID;
  * Created by Polash on 9/8/2020.
  */
 public class Person {
-    private final UUID id;
+    private final String id;
 
     private final String name;
 
-    public Person(@JsonProperty("id") UUID id,
+    public Person(@JsonProperty("id") String id,
                   @JsonProperty("name") String name) {
         this.id = id;
         this.name = name;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 

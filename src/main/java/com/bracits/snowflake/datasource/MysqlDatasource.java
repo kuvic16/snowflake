@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by Polash on 9/9/2020.
  */
-@Configuration
-public class PostgresDatasource {
+@Configuration("mysql")
+public class MysqlDatasource {
 
     @Bean
-    @ConfigurationProperties("app.datasource")
+    @ConfigurationProperties("app.datasource.mysql")
     public HikariDataSource hikariDataSource() {
         return DataSourceBuilder
                 .create()

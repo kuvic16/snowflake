@@ -31,15 +31,15 @@ public class PersonService {
         return personDao.selectAllPeople();
     }
 
-    public Optional<Person> getPersonById(UUID id) {
+    public Optional<Person> getPersonById(String id) {
         return personDao.selectPersonById(id);
     }
 
-    public int deletePerson(UUID id) {
+    public int deletePerson(String id) {
         return personDao.deletePersonById(id);
     }
 
-    public int updatePerson(UUID id, Person newPerson) {
+    public int updatePerson(String id, Person newPerson) {
         return personDao.updatePersonById(id, newPerson);
     }
 }

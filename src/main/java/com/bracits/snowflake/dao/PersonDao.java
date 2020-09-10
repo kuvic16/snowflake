@@ -10,18 +10,18 @@ import java.util.UUID;
  * Created by Polash on 9/8/2020.
  */
 public interface PersonDao {
-    int insertPerson(UUID id, Person person);
+    int insertPerson(String id, Person person);
 
     default int insertPerson(Person person) {
-        UUID id = UUID.randomUUID();
+        String id = UUID.randomUUID().toString();
         return insertPerson(id, person);
     }
 
     List<Person> selectAllPeople();
 
-    Optional<Person> selectPersonById(UUID id);
+    Optional<Person> selectPersonById(String id);
 
-    int deletePersonById(UUID id);
+    int deletePersonById(String id);
 
-    int updatePersonById(UUID id, Person person);
+    int updatePersonById(String id, Person person);
 }

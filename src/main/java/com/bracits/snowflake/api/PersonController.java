@@ -34,17 +34,17 @@ public class PersonController {
     }
 
     @GetMapping(path = "/{id}")
-    public Person getPersonById(@PathVariable("id") UUID id) {
+    public Person getPersonById(@PathVariable("id") String id) {
         return personService.getPersonById(id).orElse(null);
     }
 
     @DeleteMapping(path = "/{id}")
-    public void deletePersonById(@PathVariable("id") UUID id) {
+    public void deletePersonById(@PathVariable("id") String id) {
         personService.deletePerson(id);
     }
 
     @PutMapping(path = "/{id}")
-    public void updatePerson(@PathVariable("id") UUID id, @NonNull @RequestBody Person person) {
+    public void updatePerson(@PathVariable("id") String id, @NonNull @RequestBody Person person) {
         personService.updatePerson(id, person);
     }
 }
