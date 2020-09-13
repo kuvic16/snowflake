@@ -10,8 +10,8 @@ import java.util.UUID;
  * Created by Polash on 9/8/2020.
  */
 public class Person {
-    private final String id;
 
+    private final String id;
     private final String name;
 
     public Person(@JsonProperty("id") String id,
@@ -27,4 +27,7 @@ public class Person {
     public String getName() {
         return name;
     }
+
+
+
 }

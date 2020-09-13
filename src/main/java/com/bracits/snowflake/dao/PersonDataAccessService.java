@@ -30,10 +30,12 @@ public class PersonDataAccessService implements PersonDao{
 
     @Override
     public List<Person> selectAllPeople() {
-        final String sql = "select id, name from person";
+        final String sql = "select id, `name` from person";
         return jdbcTemplate.query(sql , (resultSet, i) -> {
             return new Person(resultSet.getString("id"), resultSet.getString("name"));
         });
+
+        //return jdbcTemplate.queryForList(sql , Person.class);
 
 //        List<Person> list = new ArrayList<>();
 //        list.add(new Person(UUID.randomUUID(), "From posgres db"));

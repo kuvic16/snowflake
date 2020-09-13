@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by Polash on 9/9/2020.
  */
-@Configuration("mysql")
+@Configuration
 public class MysqlDatasource {
 
     @Bean
