@@ -1,0 +1,3 @@
+.topbar-dropdowns .dropdown-toggle::after {
+    bottom: 19px !important;
+}

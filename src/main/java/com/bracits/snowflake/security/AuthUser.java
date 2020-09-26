@@ -17,6 +17,7 @@ import java.util.List;
 public class AuthUser {
 
     private long id;
+    private String name;
     private String pin;
     private String email;
     private String password;
@@ -36,6 +37,7 @@ public class AuthUser {
 
     public AuthUser(User user) {
         this.setId(user.getId());
+        this.setName(user.getName().toLowerCase());
         this.setPin(user.getPin());
         this.setEmail(user.getEmail());
         this.setRole(user.getRole().getName());
@@ -53,6 +55,14 @@ public class AuthUser {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPin() {

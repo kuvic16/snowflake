@@ -1,4 +1,4 @@
-<div class="header" th:fragment="header" xmlns:th="http://www.thymeleaf.org">
+<div class="header" th:fragment="header" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <nav class="container-custom topbar-nav navbar">
         <a class="navbar-brand" href="#">
             <img class="img-fluid logo" src="/src/images/brac-logo.svg" alt="Brac">
@@ -18,10 +18,12 @@
             <div class="dropdown user-dd">
                 <div class="user-profile-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                      aria-expanded="false">
-                    <img class="profile-picture" src="/src/images/person.jpg" alt="">
+                    <!--<img class="profile-picture"  src="/src/images/person.jpg" alt="">-->
+                    <img class="profile-picture" th:src="@{${@environment.getProperty('api.image-url')}(pin=${#authentication.getPrincipal().getPin()})}" on-error-src="[[blankImage]]">
+
                     <p>
-                        <strong>Green</strong>
-                        <span>Administrator</span>
+                        <strong class="text-capitalize" th:text="${#authentication.getPrincipal().getName()}"></strong>
+                        <!--<span>Administrator</span>-->
                     </p>
                 </div>
 

@@ -66,7 +66,7 @@ public class UserDetailsAdapter implements UserDetails{
 	 */
 	@Override
 	public String getUsername() {
-		return authUser.getEmail();
+		return authUser.getName();
 	}
 
 	/* (non-Javadoc)
