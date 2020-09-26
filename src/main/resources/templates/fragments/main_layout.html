@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>External Membership Disclosure</title>
+        <link href="/bundle.css" rel="stylesheet"></head>
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+        <main class="main-fold">
+            <div th:replace="fragments/sidebar :: sidebar"></div>
+            <div layout:fragment="content"></div>
+        </main>
+        <div th:replace="fragments/footer :: footer"></div>
+        <script src="/js/app.js"></script></body>
+    </body>
+</html>

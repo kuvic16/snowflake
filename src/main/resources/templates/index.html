@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>External Membership Disclosure</title>
+        <link href="bundle.css" rel="stylesheet"></head>
+    </head>
+    <body>
+        <div class="header">
+            <nav class="container-custom topbar-nav navbar">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid logo" src="src/images/brac-logo.svg" alt="Brac">
+                </a>
+            </nav>
+        </div>
+        <div class="bg_section">
+            <div class="txt_btn container-custom">
+                <h2>External Membership <br>Disclosure</h2>
+                <a th:href="@{/login}" class="btn btn-brac sso">SSO Login</a>
+            </div>
+        </div>
+        <script src="/js/app.js"></script></body>
+    </body>
+</html>

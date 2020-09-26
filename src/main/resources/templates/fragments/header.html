@@ -1,0 +1,42 @@
+<div class="header" th:fragment="header" xmlns:th="http://www.thymeleaf.org">
+    <nav class="container-custom topbar-nav navbar">
+        <a class="navbar-brand" href="#">
+            <img class="img-fluid logo" src="/src/images/brac-logo.svg" alt="Brac">
+        </a>
+        <!-- <div class="search-wrapper">
+          <div class="input-group">
+            <input type="text" class="form-control search-bar" placeholder="Search by name, user ID or, printer name…"
+              aria-label="Search by name, PIN or email id">
+            <div class="input-group-append">
+              <button class="btn btn-blank">
+                <img class="img-fluid search-icon" src="src/images/svg/search.svg" alt="Search">
+              </button>
+            </div>
+          </div>
+        </div> -->
+        <div class="topbar-dropdowns">
+            <div class="dropdown user-dd">
+                <div class="user-profile-toggle dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="false">
+                    <img class="profile-picture" src="/src/images/person.jpg" alt="">
+                    <p>
+                        <strong>Green</strong>
+                        <span>Administrator</span>
+                    </p>
+                </div>
+
+                <div class="dropdown-menu fw-dropdown-menu datatree-menu">
+                    <a class="dropdown-item" href="#">
+                        <img class="menu-item-img" src="/src/images/svg/profile.svg" alt="Profile">
+                        <span>My Usage</span>
+                    </a>
+                    <!--<a class="dropdown-item" th:href="${@environment.getProperty('sso.logout-url')}">-->
+                    <a class="dropdown-item" th:href="@{/logout}">
+                        <img class="menu-item-img" src="/src/images/svg/sign_out.svg" alt="Sign Out">
+                        <span>Sign Out</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,4 +1,9 @@
-CREATE TABLE person(
-  id VARCHAR(100) NOT NULL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL
-);
+-- CREATE TABLE person(
+--   id VARCHAR(100) PRIMARY KEY,
+--   name VARCHAR(100) NOT NULL
+-- );
+--
+-- CREATE TABLE user(
+--   person VARCHAR(100) PRIMARY KEY REFERENCES person(id),
+--   name VARCHAR(100) NOT NULL
+-- );

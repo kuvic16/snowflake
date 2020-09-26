@@ -1,16 +1,17 @@
 package com.bracits.snowflake.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonAppend;
 
 
-import java.util.UUID;
+import javax.persistence.Id;
 
 /**
- * Created by Polash on 9/8/2020.
+ * @Author Shaiful Islam Palash | kuvic16@gmail.com
+ * @CreatedAt: 9/20/2020
  */
 public class Person {
 
+    @Id
     private final String id;
     private final String name;
 
@@ -27,7 +28,4 @@ public class Person {
     public String getName() {
         return name;
     }
-
-
-
 }
